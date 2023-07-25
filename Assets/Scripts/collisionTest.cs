@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class collisionTest : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class collisionTest : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Where are you going?");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
     }
 }
